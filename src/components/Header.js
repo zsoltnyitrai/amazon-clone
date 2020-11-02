@@ -1,12 +1,22 @@
-import React from 'react'
+import React,{useState} from 'react'
 import amazonlogo from'../assets/amazon-logo.png'
 import '../styles/Header.css'
 import {Link} from 'react-router-dom'
 import {AiOutlineSearch} from 'react-icons/ai'
 import {FaShoppingCart} from 'react-icons/fa'
+import {RiAccountCircleFill} from 'react-icons/ri'
+import {IoMdArrowDropdown} from 'react-icons/io'
+import {useStateValue} from '../StateProvider'
+
 
 
 function Header() {
+    const [{basket}]=useStateValue()
+    console.log(basket)
+    const [open, setOpen]=useState(false)
+
+    
+
     return (
         <nav className='header'>
             <Link to='/' className='header-link'>
@@ -43,7 +53,43 @@ function Header() {
                 <Link to='/checkout' className='header-link'>
                     <div className='header-optionBasket'>
                         <FaShoppingCart/>
-                        <span className='header-option-lineTwo header-basketCount'>0</span>
+                        <span className='header-option-lineTwo header-basketCount'>{basket?.length}</span>
+                    </div>
+                </Link>
+            </div>
+            {/* small screen version  */}
+
+            <div className="header-small-nav">
+            <button 
+                className='header-small-nav-button' 
+                onClick={()=>setOpen(!open)}>
+                    <span><RiAccountCircleFill/></span>
+                    <span><IoMdArrowDropdown/></span>
+
+            </button>
+                {open && (
+                    <ul className ='small-nav-list'>
+                        <li>
+                            <Link to='/login' className='header-link'>
+                            <span className='header-option-small'>Sign in</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to='/' className='header-link'>
+                            <span className='header-option-small'>Returns</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to='/' className='header-link'>
+                            <span className='header-option-small'>Prime</span>
+                            </Link>
+                        </li>
+                    </ul>
+                )}
+                <Link to='/checkout' className='header-link'>
+                    <div className='header-optionBasket'>
+                        <FaShoppingCart/>
+                        <span className='header-option-lineTwo header-basketCount'>{basket?.length}</span>
                     </div>
                 </Link>
             </div>

@@ -5,7 +5,7 @@
     margin-bottom: -70px;
 
 }
-.home{
+.home-big-screen{
     max-width: 1500px;
     margin: 0 auto;
 }
@@ -15,4 +15,17 @@
     margin:0 5px;
     
 
+}
+.home-small-screen{
+    display: none;
+}
+@media (max-width:475px){
+    .home-big-screen{
+        display: none;
+    }
+    .home-small-screen{
+        display: block;
+        max-width: 1500px;
+        margin: 0 auto;
+    }
 }
