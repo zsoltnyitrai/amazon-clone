@@ -4,6 +4,7 @@ import {AiFillStar}from 'react-icons/ai'
 import productImage from '../assets/product.jpg'
 import { useStateValue } from '../StateProvider'
 
+
 function Product({id,title,image,price,rating}) {
     const [{basket},dispatch]=useStateValue()
 
@@ -15,6 +16,7 @@ function Product({id,title,image,price,rating}) {
                 title:title,
                 price:price,
                 rating:rating,
+                image:image,
             }
         })
     }

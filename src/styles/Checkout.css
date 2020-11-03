@@ -1,0 +1,18 @@
+.checkout{
+    display: flex;
+    padding: 20px;
+    background-color: white;
+    height: max-content;
+}
+.checkout-ad{
+    width: 100%;
+    margin-top: 20px;
+    height: 100px;
+    object-fit: contain;
+}
+.checkout-title{
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 1px solid lightgrey ;
+}
