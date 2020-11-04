@@ -5,7 +5,6 @@ import {useStateValue} from '../StateProvider'
 
 
 function CheckoutProduct({id,title,price,rating,image}) {
-    console.log(id,title,price,rating,image)
     const [{basket},dispatch]=useStateValue()
     const removeFromBasket=()=>{
         dispatch({
@@ -16,10 +15,10 @@ function CheckoutProduct({id,title,price,rating,image}) {
     }
     return (
         <div className='checkout-product'>
-            <img  src={image} className="checkout-product-image"/>
+            <img  src={image} className="checkout-product-image" alt=''/>
             <div className="checkout-product-info">
                 <div className="checkout-procut-title">{title}</div>
-                <div className="checkout-procut-price">{price}</div>
+                <div className="checkout-procut-price">{price} $</div>
                 <div className="checkout-procut-rating">
                     {Array(rating).fill().map((_,i)=>(
                         <div><AiFillStar/></div>

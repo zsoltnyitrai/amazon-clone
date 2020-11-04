@@ -7,15 +7,20 @@ import {FaShoppingCart} from 'react-icons/fa'
 import {RiAccountCircleFill} from 'react-icons/ri'
 import {IoMdArrowDropdown} from 'react-icons/io'
 import {useStateValue} from '../StateProvider'
+import { auth } from '../firebase'
 
 
 
 function Header() {
-    const [{basket}]=useStateValue()
-    console.log(basket)
+    const [{basket,user}]=useStateValue()
     const [open, setOpen]=useState(false)
 
-    
+    const login=()=>{
+        if(user){
+            auth.signOut()
+            console.log('signed oput')
+        }
+    }
 
     return (
         <nav className='header'>
@@ -32,14 +37,14 @@ function Header() {
             </div>
 
             <div className="header-nav">
-                <Link to='/login' className='header-link'>
-                    <div className='header-option'>
-                        <span className='header-option-lineOne'>Hy</span>
-                        <span className='header-option-lineTwo'>Sign in</span>
+                <Link to= {!user && '/login'} className='header-link'>
+                    <div onClick={login} className='header-option'>
+                    <span className='header-option-lineOne'>Hy {user?.email}</span>
+                    <span className='header-option-lineTwo'>{user? 'Sign Out': 'Sign In'}</span>
                     </div>
                 </Link>
                 <Link to='/' className='header-link'>
-                    <div className='header-option'>
+                    <div  className='header-option'>
                         <span className='header-option-lineOne'>Returns</span>
                         <span className='header-option-lineTwo'>And Orders</span>
                     </div>
@@ -71,7 +76,7 @@ function Header() {
                     <ul className ='small-nav-list'>
                         <li>
                             <Link to='/login' className='header-link'>
-                            <span className='header-option-small'>Sign in</span>
+                            <span className='header-option-small'>{user? 'Sign Out': 'Sign In'}</span>
                             </Link>
                         </li>
                         <li>

@@ -3,7 +3,6 @@ import { useStateValue } from '../StateProvider'
 import checkoutAd from '../assets/checkoutAd.PNG'
 import '../styles/Checkout.css'
 import CheckoutProduct from './CheckoutProduct'
-import Subtotal from './SubTotal'
 import SubTotal from './SubTotal'
 
 function Checkout() {

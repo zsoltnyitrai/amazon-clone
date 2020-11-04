@@ -13,6 +13,7 @@ function Home() {
 
             <div className="home-row">
                 <Product className='product'
+                    
                     id={12}
                     title={'Watch'}
                     price={3.3}  
@@ -20,29 +21,7 @@ function Home() {
                     image={productImage}  
                 />
                 <Product className='product'
-                    id={12}
-                    title={'Watch'}
-                    price={3.3}  
-                    rating={5}
-                    image={productImage}  
-                />
-            </div>
-            <div className="home-row">
-                <Product className='product'
-                    id={12}
-                    title={'Watch'}
-                    price={3.3}  
-                    rating={5}
-                    image={productImage}  
-                />
-                <Product className='product'
-                    id={12}
-                    title={'Watch'}
-                    price={3.3}  
-                    rating={5}
-                    image={productImage}  
-                />
-                <Product className='product'
+                    
                     id={12}
                     title={'Watch'}
                     price={3.3}  
@@ -52,6 +31,33 @@ function Home() {
             </div>
             <div className="home-row">
                 <Product className='product'
+                    
+                    id={12}
+                    title={'Watch'}
+                    price={3.3}  
+                    rating={5}
+                    image={productImage}  
+                />
+                <Product className='product'
+                    
+                    id={12}
+                    title={'Watch'}
+                    price={3.3}  
+                    rating={5}
+                    image={productImage}  
+                />
+                <Product className='product'
+                    
+                    id={12}
+                    title={'Watch'}
+                    price={3.3}  
+                    rating={5}
+                    image={productImage}  
+                />
+            </div>
+            <div className="home-row">
+                <Product className='product'
+                    
                     id={12}
                     title={'Watch'}
                     price={3.3}  
@@ -64,6 +70,7 @@ function Home() {
         
         <div className="home-small-screen">
                 <Product className='product'
+                    
                     id={12}
                     title={'Watch'}
                     price={3.3}  
@@ -71,6 +78,7 @@ function Home() {
                     image={productImage}  
                 />
                 <Product className='product'
+                    
                     id={12}
                     title={'Watch'}
                     price={3.3}  
@@ -78,6 +86,7 @@ function Home() {
                     image={productImage}  
                 />
                 <Product className='product'
+                    
                     id={12}
                     title={'Watch'}
                     price={3.3}  
@@ -85,6 +94,7 @@ function Home() {
                     image={productImage}  
                 />
                 <Product className='product'
+                    
                     id={12}
                     title={'Watch'}
                     price={3.3}  
@@ -92,6 +102,7 @@ function Home() {
                     image={productImage}  
                 />
                 <Product className='product'
+                    
                     id={12}
                     title={'Watch'}
                     price={3.3}  
