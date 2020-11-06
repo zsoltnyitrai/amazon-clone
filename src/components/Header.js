@@ -18,7 +18,7 @@ function Header() {
     const login=()=>{
         if(user){
             auth.signOut()
-            console.log('signed oput')
+            console.log('signed out')
         }
     }
 

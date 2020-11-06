@@ -1,6 +1,8 @@
 .product-rating{
     display: flex;
-}
+    color:gold;
+    font-size: 22px;
+    }
 .product{
     display: flex;
     flex-direction: column;
@@ -19,6 +21,7 @@
 }
 .product-price{
     margin-top: 5px;
+    font-size: 22px;
 }
 .product-info{
     height: 100px;
@@ -30,4 +33,13 @@
     border-color:  #a88734 #9c7e31 #846a29;
     width: 50%;
     margin: 0 auto;
+    padding: 5px 2px;
+    cursor: pointer;
+}
+.product button:hover{
+    background-color: #f0b728;
+
+}
+.product-title{
+    font-size: 33px;
 }

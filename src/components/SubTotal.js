@@ -11,7 +11,7 @@ function SubTotal() {
 
     return (
         <div className='subtotal'>
-            <div>Subtotal</div>
+            <div className='subtotal-title'>Subtotal</div>
             <div>{basket.length} Products</div>
         <div> price: {finalPrice.toFixed(3)} $</div>
             <button className='subtotal-button'>Proceed to checkout</button>

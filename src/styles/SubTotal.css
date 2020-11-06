@@ -1,8 +1,10 @@
 .subtotal{
     margin-top: 104px;
     background: white;
-    padding: 5px;
+    padding: 10px 15px;
     box-sizing: border-box;
+    border: 1px solid black;
+    line-height: 2;
 }
 .subtotal-button{
     background: #f0c14b;
@@ -10,4 +12,7 @@
     margin-top: 10px;
     border-color: #a88734 #9c7e31 #846a29;
     color: #111
+}
+.subtotal-title{
+    border-bottom: 1px solid lightgrey;
 }

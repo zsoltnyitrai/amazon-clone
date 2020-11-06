@@ -60,3 +60,10 @@ input[type='email'], input[type='password']{
     border:  1px solid lightgray;
     height: 40px;
 }
+.login-container-sign-in-button:hover{
+    background:  #e2ad27;
+}
+.login-container-register-in-button:hover{
+    background:  #dfdfdd;
+    box-shadow: inset 0 0 2px rgba(white,white,white,.2); 
+}

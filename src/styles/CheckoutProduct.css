@@ -17,7 +17,13 @@
     border: 1px solid;
     margin-top: 10px;
     border-color: #a88734 #9c7e31 #846a29;
-    color: #111
+    color: #111;
+    padding: 8px;
+}
+.checkout-product button:hover{
+    background: #dbae3a;
+    box-shadow: inset( #f3b415,  #dbae3a);
+
 }
 .checkout-product-title{
     font-size: 17px;
@@ -25,4 +31,5 @@
 }
 .checkout-procut-rating{
     display: flex;
+    color: gold;
 }
